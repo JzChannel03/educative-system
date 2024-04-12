@@ -1,7 +1,7 @@
-import TraditionalLink from "./components/ui/CustomLink";
 import systemLogo from "./assets/system-logo.svg";
 import Time from "./components/Time";
 import { Outlet } from "react-router-dom";
+import menuLogo from "./assets/menu.png";
 
 const App = () => {
   return (
@@ -11,8 +11,13 @@ const App = () => {
           <img src={systemLogo} alt="" />
           <h4 className="font-bold">Puerto Rico</h4>
         </div>
-        <div className="w-1/3 md:w-1/3 md:text-center text-right">
-          <TraditionalLink to={"#"}>Inicio</TraditionalLink>
+        <div className="bg-slate-100 rounded-lg md:flex p-1 opacity-80 active:opacity-100 active:bg-slate-200 hover:opacity-100 hover:bg-slate-200 w-auto md:justify-center md:w-1/3 md:text-center text-right group">
+          <img
+            className="group-hover:-rotate-90 duration-500"
+            src={menuLogo}
+            width={20}
+            alt=""
+          />
         </div>
         <div className="hidden md:w-1/3 md:block">
           <Time />
